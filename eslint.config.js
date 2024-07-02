@@ -12,7 +12,7 @@ module.exports = uniapp(
       },
     },
     rules: {
-      'no-console': 'off'
-    }
+      'no-console': 'off',
+    },
   },
 )

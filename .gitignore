@@ -20,3 +20,6 @@ dist
 *.njsproj
 *.sln
 *.sw?
+
+# vite generate dts
+**/plugin-*.d.ts

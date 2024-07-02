@@ -8,7 +8,7 @@ const title = ref('Hello')
   <view class="content">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
-      <text class="title">
+      <text class="title color-red!" font-900>
         {{ title }}
       </text>
     </view>
