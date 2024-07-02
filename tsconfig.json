@@ -1,24 +1,23 @@
 {
   "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "sourceMap": true,
+    "lib": ["ESNext", "DOM"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "lib": ["ESNext", "DOM"],
+    "typeRoots": ["node_modules/", "src/types/"],
     "types": [
       "@dcloudio/types",
-        "@uni-helper/uni-app-types",
+      "@uni-helper/uni-app-types",
       "@uni-helper/uni-cloud-types",
       "@uni-helper/uni-ui-types"
     ],
-    "typeRoots": ["node_modules/", "src/types/"],
+    "sourceMap": true
   },
   "vueCompilerOptions": {
     "plugins": [
-"@uni-helper/uni-app-types/volar-plugin"
+      "@uni-helper/uni-app-types/volar-plugin"
     ]
-  },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  }
 }
