@@ -4,6 +4,7 @@
   "description": "",
   "versionName": "1.0.0",
   "versionCode": "100",
+  "transformPx": false,
   "app-plus": {
     "usingComponents": true,
     "nvueStyleCompiler": "uni-app",
@@ -11,7 +12,8 @@
     "splashscreen": {
       "alwaysShowBeforeRender": true,
       "waiting": true,
-      "autoclose": true
+      "autoclose": true,
+      "delay": 0
     },
     "modules": {},
     "distribute": {

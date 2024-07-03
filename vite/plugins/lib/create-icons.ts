@@ -1,7 +1,7 @@
 import type { PluginOption } from 'vite'
 
 import Icons from 'unplugin-icons/vite'
-import { iconsStyleStr } from '../../utils'
+import { iconsStyleStr, localIconCollections } from '../../utils'
 
 export default function pluginCreateIcons(): PluginOption {
   return Icons({
@@ -10,5 +10,6 @@ export default function pluginCreateIcons(): PluginOption {
     defaultStyle: iconsStyleStr,
     compiler: 'vue3',
     autoInstall: true,
+    customCollections: localIconCollections,
   })
 }

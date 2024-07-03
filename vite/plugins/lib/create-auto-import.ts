@@ -10,7 +10,7 @@ export default function pluginCreateAutoImport(metaEnv: ImportMetaEnv): PluginOp
       'pinia',
     ],
     dirs: ['src/utils', 'src/hooks'],
-    dts: `${metaEnv.VITE_PLUGIN_GENERATE_TYPES_DIR}/plugin-auto-import.d.ts`,
+    dts: `${metaEnv.VITE_DIR_GENERATE_TYPES}/plugin-auto-import.d.ts`,
     resolvers: [],
   })
 }

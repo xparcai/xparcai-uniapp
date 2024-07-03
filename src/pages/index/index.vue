@@ -8,9 +8,11 @@ const title = ref('Hello')
   <view class="content">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
-      <text class="title color-red!" font-900>
+      <text class="title color-[var(--primary-color)]!" font-900>
         {{ title }}
       </text>
+      <text class="i-ep:menu color-blue" />
+      <text class="i-icon:test color-pink" />
     </view>
   </view>
 </template>

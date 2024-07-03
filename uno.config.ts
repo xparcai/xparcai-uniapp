@@ -3,7 +3,7 @@ import type { Preset } from 'unocss'
 import { defineConfig, presetAttributify, presetIcons, presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
 
 import { presetApplet, presetRemRpx, transformerAttributify } from 'unocss-applet'
-import { iconsStyle } from './vite/utils'
+import { iconsStyle, localIconCollections } from './vite/utils'
 
 const isMp = process.env?.UNI_PLATFORM?.startsWith('mp') ?? false
 
@@ -27,6 +27,7 @@ presets.push(
     scale: 1.2,
     extraProperties: iconsStyle,
     autoInstall: true,
+    collections: localIconCollections,
   }),
 )
 
