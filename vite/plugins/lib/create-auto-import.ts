@@ -11,6 +11,6 @@ export default function pluginCreateAutoImport(metaEnv: ImportMetaEnv): PluginOp
     ],
     dirs: ['src/utils', 'src/hooks'],
     dts: `${metaEnv.VITE_DIR_GENERATE_TYPES}/plugin-auto-import.d.ts`,
-    resolvers: [],
+    vueTemplate: true,
   })
 }

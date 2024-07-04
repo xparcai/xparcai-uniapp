@@ -3,6 +3,14 @@
     {
       "path": "pages/index/index",
       "type": "home"
+    },
+    {
+      "path": "pages/entry/entry",
+      "type": "page",
+      "layout": false,
+      "style": {
+        "navigationBarTitleText": "alova"
+      }
     }
   ],
   "subPackages": []

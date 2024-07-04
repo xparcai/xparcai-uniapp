@@ -6,7 +6,7 @@ const title = ref('Hello')
 
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" />
+    <image class="logo" src="/static/images/logo.png" />
     <view class="text-area">
       <text class="title color-[var(--primary-color)]!" font-900>
         {{ title }}
