@@ -10,6 +10,6 @@ export default function pluginCreateIcons(): PluginOption {
     defaultStyle: iconsStyleStr,
     compiler: 'vue3',
     autoInstall: true,
-    customCollections: localIconCollections,
+    customCollections: localIconCollections(),
   })
 }

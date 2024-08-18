@@ -1,42 +1,24 @@
-import process from 'node:process'
-import type { Preset } from 'unocss'
-import { defineConfig, presetAttributify, presetIcons, presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
-
-import { presetApplet, presetRemRpx, transformerAttributify } from 'unocss-applet'
+import { defineConfig, presetIcons, transformerDirectives, transformerVariantGroup } from 'unocss'
+import { presetUni } from '@uni-helper/unocss-preset-uni'
 import { iconsStyle, localIconCollections } from './vite/utils'
 
-const isMp = process.env?.UNI_PLATFORM?.startsWith('mp') ?? false
-
-const presets: Preset[] = []
-
-if (isMp) {
-  presets.push(
-    presetApplet(),
-    presetRemRpx(),
-  )
-}
-else {
-  presets.push(
-    presetUno(),
-    presetAttributify(),
-  )
-}
-
-presets.push(
-  presetIcons({
-    scale: 1.2,
-    extraProperties: iconsStyle,
-    autoInstall: true,
-    collections: localIconCollections,
-  }),
-)
-
 export default defineConfig({
-  presets,
+  presets: [
+    presetUni({
+      uno: true,
+      remRpx: true,
+      attributify: true,
+    }),
+    presetIcons({
+      scale: 1.2,
+      extraProperties: iconsStyle,
+      autoInstall: true,
+      collections: localIconCollections(),
+    }),
+  ],
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
-    transformerAttributify(),
   ],
   theme: {
     colors: {

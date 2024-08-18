@@ -1,7 +1,6 @@
 import type { PluginOption } from 'vite'
 
-import unocss from 'unocss/vite'
-
-export default function pluginCreateUnoCSS(): PluginOption {
+export default async function pluginCreateUnoCSS(): Promise<PluginOption[]> {
+  const unocss = (await import('unocss/vite')).default
   return unocss()
 }

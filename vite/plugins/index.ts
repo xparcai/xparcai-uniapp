@@ -17,7 +17,7 @@ export function createVitePlugins(metaEnv: ImportMetaEnv): PluginOption[] {
   plugins.push(pluginCreateUniManifest())
   plugins.push(pluginCreateUniPlatform())
   plugins.push(pluginCreateUniPlatformModifier())
-  plugins.push(pluginCreateUniLayouts())
+  plugins.push(pluginCreateUniLayouts(metaEnv))
   plugins.push(pluginCreateUniPages(metaEnv))
   plugins.push(pluginCreateUniComponents(metaEnv))
   plugins.push(pluginCreateAutoImport(metaEnv))
