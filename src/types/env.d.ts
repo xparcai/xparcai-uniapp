@@ -7,6 +7,8 @@ declare interface ImportMetaEnv {
    * @uni-helper/vite-plugin-uni-pages
    */
   readonly VITE_APP_HOME_PATH?: string
+  /** uni appid */
+  readonly VITE_UNI_APPID: string
   // ================ 项目配置 结束 ================
 
   // ================ 插件配置 开始 ================
@@ -56,7 +58,6 @@ declare interface ImportMetaEnv {
    * https://github.com/uni-helper/vite-plugin-uni-pages/blob/main/packages/core/src/types.ts#L71
    */
   readonly VITE_LANG_ROUTER_BLOCK?: 'json5' | 'json' | 'yaml' | 'yml'
-
   /**
    * vite插件使用的分包子包的文件目录
    * @uni-helper/vite-plugin-uni-pages

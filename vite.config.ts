@@ -14,6 +14,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': path.join(process.cwd(), './src'),
+        '~': path.join(process.cwd(), '.'),
       },
     },
   }

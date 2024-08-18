@@ -47,11 +47,13 @@
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "type-check": "vue-tsc --noEmit",
+    "ensure:manifest": "esno ./scripts/ensure-manifest.ts",
+    "prepare": "pnpm run ensure:manifest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-   "@dcloudio/uni-app": "3.0.0-alpha-4020320240703001",
+    "@dcloudio/uni-app": "3.0.0-alpha-4020320240703001",
     "@dcloudio/uni-app-harmony": "3.0.0-alpha-4020320240703001",
     "@dcloudio/uni-app-plus": "3.0.0-alpha-4020320240703001",
     "@dcloudio/uni-components": "3.0.0-alpha-4020320240703001",
@@ -93,6 +95,7 @@
     "@vue/runtime-core": "^3.4.38",
     "@vue/tsconfig": "^0.5.1",
     "eslint-plugin-format": "^0.1.2",
+    "esno": "^4.7.0",
     "sass": "^1.77.8",
     "typescript": "^5.5.4",
     "unocss": "^0.62.2",

@@ -1,5 +1,5 @@
 /* 挂载到html或body节点下可作用于整个文档流 */
-html,
-body {
+:root,
+page {
   --primary-color: #f14b00;
 }
